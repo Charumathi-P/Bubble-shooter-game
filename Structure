@@ -1,0 +1,10 @@
+bubble-shooter-game/
+│── index.html
+│── style.css
+│── script.js
+│── images/
+│     └── screenshot.png
+│── assets/
+│     ├── bubbles/
+│     └── sounds/
+└── README.md
