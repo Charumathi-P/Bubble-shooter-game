@@ -1,0 +1,13 @@
+function restartGame(){
+
+    score=0;
+
+    document.getElementById("score").innerHTML=0;
+
+    createGrid();
+
+}
+
+createGrid();
+
+draw();
