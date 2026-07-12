@@ -1,0 +1,50 @@
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+const ROWS = 10;
+const COLS = 10;
+const RADIUS = 28;
+
+const COLORS = [
+    "#ff4757",
+    "#2ed573",
+    "#1e90ff",
+    "#f1c40f",
+    "#9b59b6"
+];
+
+let grid = [];
+let score = 0;
+
+function Bubble(x,y,color){
+    this.x=x;
+    this.y=y;
+    this.color=color;
+    this.radius=RADIUS;
+}
+
+function createGrid(){
+
+    grid=[];
+
+    for(let r=0;r<ROWS;r++){
+
+        let row=[];
+
+        for(let c=0;c<COLS;c++){
+
+            row.push(
+                new Bubble(
+                    c*RADIUS*2+RADIUS,
+                    r*RADIUS*2+RADIUS,
+                    COLORS[Math.floor(Math.random()*COLORS.length)]
+                )
+            );
+
+        }
+
+        grid.push(row);
+
+    }
+
+}
